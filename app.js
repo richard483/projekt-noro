@@ -145,7 +145,7 @@ app.all('*', async (req, res) => { // <-- MADE ASYNC
 
         await RequestLog.create({
             method: req.method,
-            path: req.path,
+            path: req.originalUrl,
             headers: req.headers, // No need to stringify, Sequelize handles JSONB
             body: bodyToSave
         });

@@ -26,6 +26,25 @@ const rules = [
         path: '/secret-data',
         headers: { 'x-api-key': 'my-secret-key' },
         response: { statusCode: 200, body: { data: 'This is secret information.' } }
+    },
+    {
+        method: 'GET',
+        path: '/kredivo/v2/update',
+        response: {
+            statusCode: 200,
+            body: {
+                "status": "OK",
+                "legal_name": "TANDRA",
+                "fraud_status": "accept",
+                "order_id": "KD125262",
+                "transaction_time": 1501846094,
+                "amount": "1500100.00",
+                "payment_type": "30_days",
+                "transaction_status": "settlement",
+                "message": "Confirmed order status. Valid!",
+                "transaction_id": "fadee4e5-99a2-48d6-952d-007f3fa508e8"
+            }
+        }
     }
 ];
 
